@@ -27,3 +27,4 @@ echo "export ANDROID_HOME=$HOME/android_sdk" >> ~/.bashrc
 
 # Install appium
 npm install appium -g
+appium driver install uiautomator2
