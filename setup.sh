@@ -13,11 +13,11 @@ apt update
 apt install nodejs npm -y
 
 # Install and set up command line tools
-wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
-unzip commandlinetools-linux-10406996_latest.zip
-mkdir -p android_sdk/cmdline-tools/latest
-mv cmdline-tools/* android_sdk/cmdline-tools/latest
-sudo usermod -aG plugdev $LOGNAME
+# wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
+# unzip commandlinetools-linux-10406996_latest.zip
+# mkdir -p android_sdk/cmdline-tools/latest
+# mv cmdline-tools/* android_sdk/cmdline-tools/latest
+# sudo usermod -aG plugdev $LOGNAME
 
 # Install platform tools
 android_sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools"
