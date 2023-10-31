@@ -3,7 +3,7 @@
 cd $HOME
 
 # Get necessary packages
-apt install wget unzip openjdk-19-jdk -y
+apt install wget unzip openjdk-19-jdk android-sdk-platform-tools-common -y
 
 # Get node
 mkdir -p /etc/apt/keyrings
@@ -17,6 +17,7 @@ wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_la
 unzip commandlinetools-linux-10406996_latest.zip
 mkdir -p android_sdk/cmdline-tools/latest
 mv cmdline-tools/* android_sdk/cmdline-tools/latest
+sudo usermod -aG plugdev $LOGNAME
 
 # Install platform tools
 android_sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools"
