@@ -26,7 +26,7 @@ mv cmdline-tools/* android_sdk/cmdline-tools/latest
 sudo usermod -aG plugdev $LOGNAME
 
 # Install platform tools
-android_sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools"
+android_sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools;34.0.0"
 android_sdk/cmdline-tools/latest/bin/sdkmanager --install "build-tools;34.0.0"
 
 # Link adb and set ANDROID_HOME
