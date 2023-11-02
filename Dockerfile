@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ubuntu:22.04
+FROM curl:8.4.0
 COPY ./setup.sh ./setup.sh
 RUN chmod +x ./setup.sh
 RUN ./setup.sh
