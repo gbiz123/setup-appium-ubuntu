@@ -29,3 +29,11 @@ echo "export ANDROID_HOME=$HOME/android_sdk" >> ~/.bashrc
 # Install appium
 npm install appium -g
 appium driver install uiautomator2
+
+# Get maven
+wget https://dlcdn.apache.org/maven/maven-3/3.9.5/binaries/apache-maven-3.9.5-bin.tar.gz
+tar -xvf apache-maven-3.9.5-bin.tar.gz
+mv apache-maven-3.9.5 /opt/
+echo "export export PATH=$PATH:/home/atalante/.local/bin:/opt/apache-maven-3.9.5/bin"
+
+. ~/.bashrc
