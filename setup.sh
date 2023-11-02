@@ -5,12 +5,18 @@ cd $HOME
 # Get necessary packages
 apt install wget unzip openjdk-19-jdk android-sdk-platform-tools-common -y
 
-# Get node
+# Get node/npm
 mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_21.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 apt update
-apt install nodejs npm -y
+apt install npm -y
+npm install npm@9.8.1 -g
+
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+. ~/.bashrc
+nvm install 20.6.1
+nvm use 20.6.1
 
 # Install and set up command line tools
 wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
@@ -28,7 +34,7 @@ ln -sf $HOME/android_sdk/platform-tools/adb /usr/bin/adb
 echo "export ANDROID_HOME=$HOME/android_sdk" >> ~/.bashrc
 
 # Install appium
-npm install appium -g
+npm install appium@2.1.3 -g
 appium driver install uiautomator2
 
 # Get maven
