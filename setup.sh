@@ -3,6 +3,8 @@
 cd $HOME
 
 # Get necessary packages
+apt update -y
+apt upgrade -y
 apt install wget unzip openjdk-19-jdk android-sdk-platform-tools-common curl -y
 
 # Get node/npm
