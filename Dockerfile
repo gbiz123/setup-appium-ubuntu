@@ -4,3 +4,4 @@ FROM ubuntu:22.04
 COPY ./setup.sh ./setup.sh
 RUN chmod +x ./setup.sh
 RUN ./setup.sh
+ENTRYPOINT ["tail"]
