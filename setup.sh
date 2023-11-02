@@ -21,6 +21,7 @@ sudo usermod -aG plugdev $LOGNAME
 
 # Install platform tools
 android_sdk/cmdline-tools/latest/bin/sdkmanager --install "platform-tools"
+android_sdk/cmdline-tools/latest/bin/sdkmanager --install "build-tools;34.0.0"
 
 # Link adb and set ANDROID_HOME
 ln -sf $HOME/android_sdk/platform-tools/adb /usr/bin/adb
@@ -34,6 +35,6 @@ appium driver install uiautomator2
 wget https://dlcdn.apache.org/maven/maven-3/3.9.5/binaries/apache-maven-3.9.5-bin.tar.gz
 tar -xvf apache-maven-3.9.5-bin.tar.gz
 mv apache-maven-3.9.5 /opt/
-echo "export PATH=$PATH:/opt/apache-maven-3.9.5/bin"
+echo "export PATH=$PATH:/opt/apache-maven-3.9.5/bin" >> ~/.bashrc
 
 . ~/.bashrc
