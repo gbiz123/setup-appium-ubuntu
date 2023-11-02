@@ -19,7 +19,7 @@ nvm install 20.6.1
 nvm use 20.6.1
 
 # Install and set up command line tools
-wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
+yes | wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
 unzip commandlinetools-linux-10406996_latest.zip
 mkdir -p android_sdk/cmdline-tools/latest
 mv cmdline-tools/* android_sdk/cmdline-tools/latest
